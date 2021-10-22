@@ -8,31 +8,40 @@
 </head>
 <body>
     <div class="container">
-        <form action="#" class="form-controller">
+        <form action= "" id="form">
             <h1>Create Account</h1>
             <div class="form-field">
                 <label for="name">Name</label>
-                <input type="text" placeholder="yourname" id="name">
-                <img src="./assets/icons/error.svg">
-                <img src="./assets/icons/success.svg">
-                <span>error message</span>
+                <input type="text" placeholder="your name" id="name" spellcheck="false" required>
+                <img class="err-icon" src="./assets/icons/error.svg">
+                <img class="suc-icon" src="./assets/icons/success.svg">
+                <span></span>
             </div>
             <div class="form-field">
                 <label for="email">Email</label>
-                <input type="email" placeholder="yourname@example.com" id="email">
-                <img src="./assets/icons/error.svg">
-                <img src="./assets/icons/success.svg">
-                <span>error message</span>
+                <input type="email" placeholder="yourname@example.com" id="email" required>
+                <img class="err-icon" src="./assets/icons/error.svg">
+                <img class="suc-icon" src="./assets/icons/success.svg">
+                <span></span>
             </div>
             <div class="form-field">
                 <label for="password">Password</label>
-                <input type="password" placeholder="yourpassword" id="password">
-                <img src="./assets/icons/error.svg">
-                <img src="./assets/icons/success.svg">
-                <span>error message</span>
+                <input type="password" placeholder="your password" id="password" required>
+                <img class="err-icon" src="./assets/icons/error.svg">
+                <img class="suc-icon" src="./assets/icons/success.svg">
+                <span></span>
+            </div>
+            <div class="form-field">
+                <label for="password2">Password Check</label>
+                <input type="password" placeholder="re-type your password" id="password2" required>
+                <img class="err-icon" src="./assets/icons/error.svg">
+                <img class="suc-icon" src="./assets/icons/success.svg">
+                <span></span>
             </div>
             <button type="submit">Sign Up</button>
         </form>
     </div>
+    
+    <script src="./app/validation.js"></script>
 </body>
 </html>

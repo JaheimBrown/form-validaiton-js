@@ -86,6 +86,10 @@ img {
 }
 
 span {
+  display: block;
+  height: 25px;
+  max-height: auto;
+  padding: 2px 0;
   visibility: hidden;
   font-size: 14px;
   color: $errColor;
@@ -113,11 +117,27 @@ button {
 
 // Class Activators
 .err {
-  outline: none;
-  border-bottom: 2px solid $errColor;
+  input {
+    outline: none;
+    border-bottom: 2px solid $errColor;
+  }
+
+  span {
+    visibility: visible;
+  }
+
+  .err-icon {
+    visibility: visible;
+  }
 }
 
 .success {
-  outline: none;
-  border-bottom: 2px solid $successColor;
+  input {
+    outline: none;
+    border-bottom: 2px solid $successColor;
+  }
+
+  .suc-icon {
+    visibility: visible;
+  }
 }
