@@ -9,7 +9,6 @@ const Button = document.getElementById("Button");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
-    console.log("event ran")
 
     checkInputs();
     form.reset();
@@ -19,7 +18,6 @@ const checkInputs = () => {
     let nameVal = username.value.trim();
     const emailVal = email.value.trim();
     const passwordVal = password.value.trim();
-    const passwordCVal = passwordVal;
 
     if (nameVal === '') {   
         error(username, "Username cannot be blank.");
@@ -62,7 +60,7 @@ const checkInputs = () => {
     }
 
     // form submission
-    formCheck()
+    formCheck();
 
 }
 
@@ -99,8 +97,12 @@ const formCheck = () => {
     if (!classArray.includes("err")) {
         Button.className += "form-submission";
         Button.innerText = "Submitted 👍";
-        
+
         setTimeout(() => {
+            allForms.forEach(e => {
+                e.classList -= "success";
+            })
+
             Button.className = "";
             Button.innerText = "Sign Up";
         }, 2500)
